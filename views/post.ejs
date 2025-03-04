@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<section class="py-2 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Create a New Post</h1>
+      <form action="/post" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input type="file" class="form-control" id="image" name="image" required>
+        </div>
+        <div class="mb-3">
+          <label for="text" class="form-label">Text</label>
+          <textarea class="form-control" id="text" name="text" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
